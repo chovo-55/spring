@@ -3,7 +3,6 @@ package com.example.spring.web;
 import com.example.spring.entities.Common;
 import com.example.spring.entities.Project;
 import com.example.spring.service.IProjectService;
-import com.example.spring.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,11 +37,12 @@ public class ProjectController {
 
     @PutMapping(path = "{projectId}")
     public void updateCommon(
-        @PathVariable("projectId") Long projectId,
-        @PathVariable( required = false) String name){
+            @PathVariable("projectId") Long projectId,
+            @PathVariable(required = false) String name) {
     }
 
-    /*@DeleteMapping(path = "{projectId}")
+    /*
+    @DeleteMapping(path = "{projectId}")
     public void deleteCustom(){
         projectService.deleteCommon(projectId);
     }
@@ -52,7 +52,8 @@ public class ProjectController {
         projectService.deleteCommon(projectId);
     }*/
 
-    /*@PostMapping
+    /*
+    @PostMapping
     public void registerNewCustom(@RequestBody Custom custom){
         projectService.addNewCustom(custom);
     }

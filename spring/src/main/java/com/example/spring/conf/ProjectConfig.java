@@ -16,11 +16,11 @@ import java.util.List;
 public class ProjectConfig {
 
     @Bean
-    CommandLineRunner commandLineRunner(ProjectRepository repository){
+    CommandLineRunner commandLineRunner(ProjectRepository repository) {
         return args -> {
-            Common common = new Common("common",12.3, LocalDate.now(),3.21);
-            Custom custom = new Custom("custom",12.3, LocalDate.now(),3.21,
-                    "y","t","S");
+            Common common = new Common("common", 12.3, LocalDate.now(), 3.21);
+            Custom custom = new Custom("custom", 12.3, LocalDate.now(), 3.21,
+                    "y", "t", "S");
             List<Project> list = new ArrayList();
             list.add(common);
             list.add(custom);
