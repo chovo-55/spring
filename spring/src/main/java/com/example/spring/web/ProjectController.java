@@ -24,7 +24,6 @@ public class ProjectController {
         return projectService.getProject();
     }
 
-
     @PostMapping
     public void registerNewCommon(@RequestBody Common common) {
         projectService.addNewCommon(common);
@@ -35,11 +34,11 @@ public class ProjectController {
         projectService.deleteCommon(projectId);
     }
 
-    @PutMapping(path = "{projectId}")
+    /*@PutMapping(path = "{projectId}")
     public void updateCommon(
             @PathVariable("projectId") Long projectId,
             @PathVariable(required = false) String name) {
-    }
+    }*/
 
     /*
     @DeleteMapping(path = "{projectId}")
@@ -57,10 +56,9 @@ public class ProjectController {
     public void registerNewCustom(@RequestBody Custom custom){
         projectService.addNewCustom(custom);
     }
-    */
 
     @PostMapping
     public void registerNewInterior(@RequestBody Project project) {
         projectService.addProject(project);
-    }
+    }*/
 }
