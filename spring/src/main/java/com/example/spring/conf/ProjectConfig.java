@@ -2,6 +2,7 @@ package com.example.spring.conf;
 
 import com.example.spring.entities.Common;
 import com.example.spring.entities.Custom;
+import com.example.spring.entities.Interior;
 import com.example.spring.entities.Project;
 import com.example.spring.repository.ProjectRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -18,12 +19,13 @@ public class ProjectConfig {
     @Bean
     CommandLineRunner commandLineRunner(ProjectRepository repository) {
         return args -> {
-            Common common = new Common("common", 12.3, LocalDate.now(), 3.21);
-            Custom custom = new Custom("custom", 12.3, LocalDate.now(), 3.21,
-                    "y", "t", "S");
             List<Project> list = new ArrayList();
+            Project common = new Common("common", 11232.3, LocalDate.now(), 3.2121);
+            Project custom = new Custom("custom", 4512.3, LocalDate.now(), 8963.2121,"y","t","s");
+            Project interior = new Interior("interior", 12312.3, LocalDate.now(), "desc");
             list.add(common);
             list.add(custom);
+            list.add(interior);
             repository.saveAll(list);
         };
     }

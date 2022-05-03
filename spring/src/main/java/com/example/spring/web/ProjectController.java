@@ -1,6 +1,8 @@
 package com.example.spring.web;
 
 import com.example.spring.entities.Common;
+import com.example.spring.entities.Custom;
+import com.example.spring.entities.Interior;
 import com.example.spring.entities.Project;
 import com.example.spring.service.IProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +26,24 @@ public class ProjectController {
         return projectService.getProject();
     }
 
+    /*
     @PostMapping
     public void registerNewCommon(@RequestBody Common common) {
         projectService.addNewCommon(common);
+    }*/
+
+    @PostMapping
+    public void registerNewProject(@RequestBody Project project) {
+        projectService.addNewProject(project);
     }
 
+    /*
     @DeleteMapping(path = "{projectId}")
     public void deleteCommon(@PathVariable("projectId") Long projectId) {
         projectService.deleteCommon(projectId);
     }
 
-    /*@PutMapping(path = "{projectId}")
+    @PutMapping(path = "{projectId}")
     public void updateCommon(
             @PathVariable("projectId") Long projectId,
             @PathVariable(required = false) String name) {

@@ -16,10 +16,6 @@ import java.time.LocalDate;
 @Getter
 @ToString
 public class Interior extends Project {
-    protected Long id;
-    protected String name;
-    protected Double price;
-    protected LocalDate date;
     protected String description;
 
     public Interior(String name, Double price, LocalDate date, String description) {

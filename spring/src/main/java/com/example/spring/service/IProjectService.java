@@ -1,6 +1,7 @@
 package com.example.spring.service;
 
 import com.example.spring.entities.Common;
+import com.example.spring.entities.Custom;
 import com.example.spring.entities.Project;
 
 import java.util.List;
@@ -8,13 +9,13 @@ import java.util.Optional;
 
 public interface IProjectService {
 
-    void saveCheck(Project project, Optional var);
+    // void deleteCommon(Long projectId);
 
-    void deleteCommon(Long projectId);
-
-    void addNewCommon(Common common);
+    void addNewProject(Project project);
 
     List<Project> getProject();
 
-    void addProject(Project project);
+    // void addProject(Project project);
+
+    // void addNewCustom(Custom custom);
 }
