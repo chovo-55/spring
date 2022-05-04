@@ -13,5 +13,4 @@ public class ProjectControllerAdvice {
     public HttpEntity<Object> handleAlreadyExistingProject(ProjectAlreadyExistsException e) {
         return new HttpEntity<>(e.getMessage());
     }
-
 }

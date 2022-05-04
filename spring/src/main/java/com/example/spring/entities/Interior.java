@@ -8,8 +8,6 @@ import lombok.ToString;
 import javax.persistence.Entity;
 import java.time.LocalDate;
 
-//lombok
-//Preco nepouzit pri entity
 @Entity
 @NoArgsConstructor
 @Setter

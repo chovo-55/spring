@@ -26,7 +26,4 @@ public class Custom extends Project {
         this.heatingType = heatingType;
         this.heatingSource = heatingSource;
     }
-
-
-
 }

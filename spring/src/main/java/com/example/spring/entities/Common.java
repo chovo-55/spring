@@ -17,5 +17,4 @@ public class Common extends Project {
         super(name, price, date);
         this.area = area;
     }
-
 }
