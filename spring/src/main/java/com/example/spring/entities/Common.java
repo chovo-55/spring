@@ -9,13 +9,16 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 public class Common extends Project {
     protected Double area;
 
     public Common(String name, Double price, LocalDate date, Double area) {
         super(name, price, date);
         this.area = area;
+    }
+
+    public Common() {
+
     }
 
 }

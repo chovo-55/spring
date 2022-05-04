@@ -11,7 +11,6 @@ import java.time.LocalDate;
 //lombok
 //Preco nepouzit pri entity
 @Entity
-@NoArgsConstructor
 @Setter
 @Getter
 @ToString
@@ -22,4 +21,9 @@ public class Interior extends Project {
         super(name, price, date);
         this.description = description;
     }
+
+    public Interior() {
+
+    }
+
 }

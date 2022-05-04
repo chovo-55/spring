@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @ToString
 @Getter
 @Setter
-@NoArgsConstructor
 public class Custom extends Project {
     protected double area;
     protected String garage;
@@ -27,6 +26,8 @@ public class Custom extends Project {
         this.heatingSource = heatingSource;
     }
 
+    public Custom() {
+    }
 
 
 }

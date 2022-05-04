@@ -1,8 +1,5 @@
 package com.example.spring.service;
 
-import com.example.spring.entities.Common;
-import com.example.spring.entities.Custom;
-import com.example.spring.entities.Interior;
 import com.example.spring.entities.Project;
 import com.example.spring.exceptions.ProjectAlreadyExistsException;
 import com.example.spring.repository.ProjectRepository;
@@ -30,11 +27,6 @@ public class ProjectService implements IProjectService {
     }
 
     /*
-
-    @Override
-    public void addProject(Project project) {
-        projectRepository.save(project);
-    }
     @Override
     public void deleteCommon(Long projectId) {
         boolean exists = projectRepository.existsById(projectId);
@@ -49,31 +41,9 @@ public class ProjectService implements IProjectService {
     @Override
     public void addNewProject(Project project) {
         Optional<Project> projectName = projectRepository.projectFindByName(project.getName());
-
-
-
         if (projectName.isPresent()) {
             throw new ProjectAlreadyExistsException("Project with provided name already exists");
         }
         projectRepository.save(project);
     }
-
-    /*
-    @Override
-    public void addNewCommon(Common common) {
-        Optional<Common> commonProjectName = ProjectRepository.commonFindByName(common.getName());
-        saveCheck(common, commonProjectName);
-    }
-
-    @Override
-    public void addNewCustom(Custom custom) {
-        Optional<Custom> customFindByName = projectRepository.customFindByName(custom.getName());
-        saveCheck(custom,customFindByName);
-    }
-
-
-    public void addNewInterior(Interior interior) {
-        Optional<Interior> InteriorFindByName = projectRepository.InteriorFindByName(interior.getName());
-        saveCheck(interior,InteriorFindByName);
-    }*/
 }
