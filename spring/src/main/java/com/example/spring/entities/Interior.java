@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import java.time.LocalDate;
 
 @Entity
-@NoArgsConstructor
 @Setter
 @Getter
 @ToString
@@ -20,4 +19,9 @@ public class Interior extends Project {
         super(name, price, date);
         this.description = description;
     }
+
+    public Interior() {
+
+    }
+
 }
