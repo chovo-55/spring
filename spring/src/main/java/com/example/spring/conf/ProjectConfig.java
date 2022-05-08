@@ -20,9 +20,9 @@ public class ProjectConfig {
     CommandLineRunner commandLineRunner(ProjectRepository repository) {
         return args -> {
             List<Project> list = new ArrayList();
-            Project common = new Common("common", 11232.3, LocalDate.now(), 3.2121);
-            Project custom = new Custom("custom", 4512.3, LocalDate.now(), 8963.2121,"y","t","s");
-            Project interior = new Interior("interior", 12312.3, LocalDate.now(), "desc");
+            Project common = new Common("common","common", 11232.3, LocalDate.now(), 3.2121);
+            Project custom = new Custom("custom","custom", 4512.3, LocalDate.now(), 8963.2121,"t","s");
+            Project interior = new Interior("interior","interior", 12312.3, LocalDate.now(), "desc");
             list.add(common);
             list.add(custom);
             list.add(interior);

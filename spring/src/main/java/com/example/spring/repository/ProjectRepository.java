@@ -10,7 +10,6 @@ import java.util.Optional;
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
 
-
-    @Query("SELECT a, b, c FROM Common a, Custom b, Interior c WHERE a.name = ?1 OR b.name  = ?1 OR c.name  = ?1")
+    @Query("SELECT a, b, c FROM Common a, Custom b, Interior c WHERE a.name = ?1 OR b.name = ?1 OR c.name = ?1")
     Optional<Project> projectFindByName(String name);
 }

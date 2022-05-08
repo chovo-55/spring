@@ -1,5 +1,6 @@
 package com.example.spring.web;
 
+import com.example.spring.entities.Dummy;
 import com.example.spring.entities.Project;
 import com.example.spring.service.IProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,15 +25,15 @@ public class ProjectController {
     }
 
     @PostMapping
-    public void registerNewProject(@RequestBody Project project) {
+    public void registerNewProject(@RequestBody Dummy project) {
         projectService.addNewProject(project);
     }
 
-    /*
     @DeleteMapping(path = "{projectId}")
     public void deleteCommon(@PathVariable("projectId") Long projectId) {
-        projectService.deleteCommon(projectId);
+        projectService.deleteProject(projectId);
     }
+    /*
     @PutMapping(path = "{projectId}")
     public void updateCommon(
             @PathVariable("projectId") Long projectId,

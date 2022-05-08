@@ -1,11 +1,18 @@
 package com.example.spring.entities;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
-
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 @Entity
-//@MappedSuperclass ?diff?
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Project {
     @Id
@@ -19,50 +26,25 @@ public class Project {
             strategy = GenerationType.SEQUENCE,
             generator = "project_sequence"
     )
+    @Column(name = "id")
     protected Long id;
+
+    @Column(name = "type")
+    protected String type;
+
+    @Column(name = "name")
     protected String name;
+
+    @Column(name = "price")
     protected Double price;
+
+    @Column(name = "date")
     protected LocalDate date;
 
-    public Project(String name, Double price, LocalDate date) {
+    public Project(String type, String name, Double price, LocalDate date) {
+        this.type = type;
         this.name = name;
         this.price = price;
-        this.date = date;
-    }
-
-    public Project() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
