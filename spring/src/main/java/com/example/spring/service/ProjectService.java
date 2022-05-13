@@ -36,21 +36,24 @@ public class ProjectService implements IProjectService {
 
     @Override
     public void addNewProject(Dummy project) {
+
         Optional<Project> projectName = projectRepository.projectFindByName(project.getName());
+
         if (projectName.isPresent()) {
-            throw new ProjectAlreadyExistsException("Project with provided name already exists");
+            throw new ProjectAlreadyExistsException("Project with provided name already exists!");
         }
+
         switch (project.getType()) {
             case ("custom"):
-                Custom custom = new Custom(project.getType(), project.getName(), project.getPrice(),project.getDate(),project.getArea(),project.getHeatingType(),project.getHeatingSource());
+                Custom custom = new Custom(project.getType(), project.getName(), project.getPrice(), project.getDate(), project.getArea(), project.getHeatingType(), project.getHeatingSource());
                 projectRepository.save(custom);
                 break;
             case ("common"):
-                Common common = new Common(project.getType(), project.getName(), project.getPrice(),project.getDate(),project.getArea());
+                Common common = new Common(project.getType(), project.getName(), project.getPrice(), project.getDate(), project.getArea());
                 projectRepository.save(common);
                 break;
             case ("interior"):
-                Interior interior = new Interior(project.getType(), project.getName(), project.getPrice(),project.getDate(),project.getDescription());
+                Interior interior = new Interior(project.getType(), project.getName(), project.getPrice(), project.getDate(), project.getDescription());
                 projectRepository.save(interior);
                 break;
         }

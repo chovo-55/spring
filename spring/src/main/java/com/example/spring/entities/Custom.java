@@ -26,7 +26,7 @@ public class Custom extends Project {
     protected String heatingSource;
 
     public Custom(String type, String name, Double price, LocalDate date, Double area, String heatingType, String heatingSource) {
-        super(type,name, price, date);
+        super(type, name, price, date);
         this.area = area;
         this.heatingType = heatingType;
         this.heatingSource = heatingSource;

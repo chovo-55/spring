@@ -19,8 +19,8 @@ public class Interior extends Project {
     @Column(name = "description")
     protected String description;
 
-    public Interior(String type,String name, Double price, LocalDate date, String description) {
-        super(type,name, price, date);
+    public Interior(String type, String name, Double price, LocalDate date, String description) {
+        super(type, name, price, date);
         this.description = description;
     }
 }

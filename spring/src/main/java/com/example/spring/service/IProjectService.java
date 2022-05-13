@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface IProjectService {
 
+    List<Project> getProject();
+
     void deleteProject(Long projectId);
 
     void addNewProject(Dummy project);
-
-    List<Project> getProject();
 }

@@ -5,7 +5,6 @@ import com.example.spring.entities.Project;
 import com.example.spring.service.IProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -33,11 +32,5 @@ public class ProjectController {
     public void deleteCommon(@PathVariable("projectId") Long projectId) {
         projectService.deleteProject(projectId);
     }
-    /*
-    @PutMapping(path = "{projectId}")
-    public void updateCommon(
-            @PathVariable("projectId") Long projectId,
-            @PathVariable(required = false) String name) {
-    }
-    */
+
 }

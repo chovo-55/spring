@@ -20,7 +20,7 @@ public class Common extends Project {
     protected Double area;
 
     public Common(String type, String name, Double price, LocalDate date, Double area) {
-        super(type,name, price, date);
+        super(type, name, price, date);
         this.area = area;
     }
 }

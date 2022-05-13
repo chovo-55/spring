@@ -5,6 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Getter
@@ -19,4 +21,5 @@ public class Dummy {
     protected String heatingType;
     protected String heatingSource;
     protected String description;
+
 }
