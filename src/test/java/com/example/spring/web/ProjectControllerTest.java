@@ -25,9 +25,9 @@ public class ProjectControllerTest {
     public void test() {
 
         Mockito.when(projectService.getProject()).thenReturn(null);
+
+
     }
-
-
 
 
    /* private static final String ENDPOINT = "/endpoint";
